@@ -1,1 +1,248 @@
-# ZalOfficial-Pay
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZalOfficial Pay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(to right, #4f46e5, #7c3aed, #9333ea);
+        }
+        
+        .payment-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .payment-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.5);
+        }
+        
+        .qris-container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .qris-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #4f46e5, #9333ea, #4f46e5);
+            z-index: -1;
+            filter: blur(15px);
+            opacity: 0.7;
+        }
+        
+        .btn-pay {
+            background: linear-gradient(to right, #4f46e5, #7c3aed);
+            transition: all 0.3s ease;
+            letter-spacing: 1px;
+        }
+        
+        .btn-pay:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(79, 70, 229, 0.4);
+        }
+        
+        .payment-icon {
+            font-size: 2rem;
+            background: linear-gradient(to right, #4f46e5, #9333ea);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="gradient-bg py-6 shadow-xl">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <h1 class="text-2xl font-bold">ZalOfficial Pay</h1>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="font-medium hover:text-blue-200 transition">Home</a>
+                <a href="#" class="font-medium hover:text-blue-200 transition">Services</a>
+                <a href="#" class="font-medium hover:text-blue-200 transition">Features</a>
+                <a href="#" class="font-medium hover:text-blue-200 transition">Contact</a>
+            </nav>
+            <button class="md:hidden text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="flex-grow flex items-center py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Silahkan Pilih Payment Di Bawah Ini</h2>
+                <p class="text-lg text-gray-300 mb-8"</p>
+                
+                <div class="payment-card inline-block p-6 mb-12">
+                    <h3 class="text-xl font-semibold mb-4">Payment Yang Tersedia</h3>
+                    <div class="flex justify-center space-x-6">
+                        <div class="flex items-center">
+                            <i class="fas fa-qrcode payment-icon mr-2"></i>
+                            <span>QRIS</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-wallet payment-icon mr-2"></i>
+                            <span>Dana</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QRIS Section -->
+            <div class="max-w-2xl mx-auto mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold mb-2">QRIS Payment</h3>
+                    <p class="text-gray-300"></p>
+                </div>
+                
+                <div class="flex justify-center">
+                    <div class="qris-container p-8">
+                        <img src="https://files.catbox.moe/snwjnd.jpeg" alt="QRIS code for payment with purple and blue gradient background, clean and professional design with 'Scan to Pay' text" class="mx-auto h-64 w-64" />
+                        <div class="mt-6 text-center text-gray-800">
+                            <h4 class="font-bold text-lg mb-2">Scan To Pay</h4>
+                            <p class="text-sm"></p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-8 flex justify-center space-x-4">
+                    <button class="btn-pay px-8 py-3 rounded-full font-bold text-white" id="downloadQris">
+                        <i class="fas fa-download mr-2"></i>Download Qris
+                    </button>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-center mb-8">Other Payment Methods</h3>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Dana -->
+                    <div class="payment-card p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-white p-3 rounded-full mr-4">
+                                <img src="https://files.catbox.moe/y7xlnc.jpg" alt="Dana e-Wallet logo with blue and white colors, circular design" class="h-10 w-10" />
+                            </div>
+                            <h4 class="text-xl font-bold">Dana</h4>
+                        </div>
+                        <p class="text-gray-300 mb-6"</p>
+                        <div class="bg-gray-800 rounded-lg p-4 mb-6">
+                            <p class="text-sm text-gray-400 mb-2">A/N PRX HARXXXXX</p>
+                            <div class="flex items-center justify-between">
+                                <p class="font-mono text-lg font-bold" id="danaNumber">0895-2413-4626</p>
+                                <button class="copy-btn text-purple-400 hover:text-purple-200 ml-2" data-target="danaNumber">
+                                    <i class="fas fa-copy"></i>
+                                </button>
+                            </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">PREMIUM PAY</h3>
+                    <p class="text-gray-400">High-end payment solutions for your premium needs.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope mr-2"></i> ZalOfficial@gmail.com
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-phone mr-2"></i> +62 895-2413-4626
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-2"></i> Bengkulu Error System
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>© ZalOfficial Pay. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.btn-pay').forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.style.boxShadow = '0 5px 20px rgba(79, 70, 229, 0.6)';
+            });
+            button.addEventListener('mouseleave', () => {
+                button.style.boxShadow = '0 5px 15px rgba(79, 70, 229, 0.4)';
+            });
+        });
+
+        // Copy functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetId = btn.getAttribute('data-target');
+                const text = document.getElementById(targetId).textContent;
+                navigator.clipboard.writeText(text);
+                
+                // Change icon temporarily to indicate success
+                const icon = btn.querySelector('i');
+                icon.className = 'fas fa-check';
+                setTimeout(() => {
+                    icon.className = 'fas fa-copy';
+                }, 1500);
+            });
+        });
+
+        // QRIS download functionality
+        document.getElementById('downloadQris').addEventListener('click', () => {
+            const qrImg = document.querySelector('.qris-container img');
+            const link = document.createElement('a');
+            link.href = qrImg.src;
+            link.download = 'qris-pay.png';
+            link.click();
+        });
+    </script>
+</body>
+</html>
+
