@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZalOfficial Pay</title>
+    <title>Payment ZalStecu💸</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -100,7 +100,6 @@
     <section class="flex-grow flex items-center py-12">
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto text-center mb-12">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Silahkan Pilih Payment Di Bawah Ini</h2>
                 <p class="text-lg text-gray-300 mb-8"</p>
                 
                 <div class="payment-card inline-block p-6 mb-12">
@@ -121,7 +120,7 @@
             <!-- QRIS Section -->
             <div class="max-w-2xl mx-auto mb-16">
                 <div class="text-center mb-8">
-                    <h3 class="text-2xl font-bold mb-2">QRIS Payment</h3>
+                    <h3 class="text-2xl font-bold mb-2">Payment QRIS</h3>
                     <p class="text-gray-300"></p>
                 </div>
                 
@@ -144,7 +143,7 @@
 
             <!-- Payment Methods -->
             <div class="max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold text-center mb-8">Other Payment Methods</h3>
+                <h3 class="text-2xl font-bold text-center mb-8">Payment Dana</h3>
                 
                 <div class="grid md:grid-cols-2 gap-8">
                     <!-- Dana -->
@@ -176,35 +175,25 @@
         <div class="container mx-auto px-4">
             <div class="grid md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">PREMIUM PAY</h3>
+                    <h3 class="text-xl font-bold mb-4">ZALOFFICIAL PAY</h3>
                     <p class="text-gray-400">High-end payment solutions for your premium needs.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Services</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
                 </div>
                 <div>
                     <h4 class="font-bold mb-4">Contact Us</h4>
                     <ul class="space-y-2">
                         <li class="flex items-center text-gray-400">
-                            <i class="fas fa-envelope mr-2"></i> ZalOfficial@gmail.com
+                            <i class="fas fa-phone mr-2"></i>WhatsApp : +62 895-2413-4626
                         </li>
-                        <li class="flex items-center text-gray-400">
-                            <i class="fas fa-phone mr-2"></i> +62 895-2413-4626
-                        </li>
-                        <li class="flex items-center text-gray-400">
-                            <i class="fas fa-map-marker-alt mr-2"></i> Bengkulu Error System
+                                                <li class="flex items-center text-gray-400">
+                            <i class="fas fa-phone mr-2"></i>Telegram : @ZalBaikSekaliii
                         </li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>© ZalOfficial Pay. All Rights Reserved.</p>
+                <p>© ZalOfficial Payment</p>
             </div>
         </div>
     </footer>
@@ -217,15 +206,11 @@
                 button.style.boxShadow = '0 5px 15px rgba(79, 70, 229, 0.4)';
             });
         });
-
-        // Copy functionality
         document.querySelectorAll('.copy-btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 const targetId = btn.getAttribute('data-target');
                 const text = document.getElementById(targetId).textContent;
                 navigator.clipboard.writeText(text);
-                
-                // Change icon temporarily to indicate success
                 const icon = btn.querySelector('i');
                 icon.className = 'fas fa-check';
                 setTimeout(() => {
@@ -233,8 +218,6 @@
                 }, 1500);
             });
         });
-
-        // QRIS download functionality
         document.getElementById('downloadQris').addEventListener('click', () => {
             const qrImg = document.querySelector('.qris-container img');
             const link = document.createElement('a');
@@ -244,5 +227,4 @@
         });
     </script>
 </body>
-</html>
-
+                    </html>
